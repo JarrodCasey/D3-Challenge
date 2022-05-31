@@ -46,8 +46,8 @@ function makeResponsive() {
     function xScale(censusData, selectedXAxis) {
         //scales
         var xLinearScale = d3.scaleLinear()
-          .domain([d3.min(censusData, d => d[selectedXAxis]) * 1,
-            d3.max(censusData, d => d[selectedXAxis]) * 1.5])
+          .domain([d3.min(censusData, d => d[selectedXAxis]) * 0.7,
+            d3.max(censusData, d => d[selectedXAxis]) * 1.2])
           .range([0, width]);
     
         return xLinearScale;
@@ -57,8 +57,8 @@ function makeResponsive() {
     function yScale(censusData, selectedYAxis) {
         //scales
         let yLinearScale = d3.scaleLinear()
-          .domain([d3.min(censusData, d => d[selectedYAxis]) * 1,
-            d3.max(censusData, d => d[selectedYAxis]) * 1.5])
+          .domain([d3.min(censusData, d => d[selectedYAxis]) * 0.7,
+            d3.max(censusData, d => d[selectedYAxis]) * 1.2])
           .range([height, 0]);
       
         return yLinearScale;
